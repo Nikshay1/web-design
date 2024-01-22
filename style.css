@@ -1,3 +1,8 @@
+/* adding a new fond in the css file  */
+
+
+
+
 @font-face{
     font-family:Slussen;
     src:url(/fonts/Slussen-Compressed-Black.woff2) format("woff2");
@@ -27,15 +32,48 @@
 
 
 
+
+
+
+/* changing the color of the scroll bar */
+
+
+
+
+
+
+  /* This is the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #b3b3b3;
+}
+
+/* This is the handle (or thumb) */
+::-webkit-scrollbar-thumb {
+    background: #868585;
+    border-radius: 12px;
+}
+
+/* Change the handle color on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Slussen ; 
-    background-color: antiquewhite;
-    
+    font-family: Slussen; 
+    background-color: #353535;
+    color: #efe3de;
+    box-sizing: border-box;
 }
 .header {
-    width: 100%;
+    width: cal(100% - 30px);
     height: auto;
     margin : 15px; 
 }
@@ -52,6 +90,7 @@ body {
     display :flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
 }
 
@@ -63,17 +102,65 @@ body {
 
 
 .right {
-    width: 50%;
+    width: 30%;
+    float: right;
 }
 
 
 .left {
-    width: 50%;
-
-   
+    width: 50%;  
 }
 
 .left img {
-    width: 30%;
+    width: 20%;
     height: auto;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #353535;
+    color: #efe3de;
+    font-family: Slussen;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    list-style: none;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #efe3de;
+    font-family: Slussen;
+    font-weight: 400;
+}
+
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+
+/* controlling the quote */
+.quote p {
+    font-size: 400%;
+    line-height: 1.6;
+    font-size: 3.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+}
+
